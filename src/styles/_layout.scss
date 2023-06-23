@@ -1,0 +1,1317 @@
+main {
+  min-height: 75vh;
+  padding-top: 90px;
+  padding-bottom: 1rem;
+}
+
+.page-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  #root {
+    .MuiContainer-root {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+}
+
+/**************************************************
+// Home page layout *******************************
+// Author: Dalbir Singh ***************************
+***************************************************/
+
+// Hero section
+
+.wrapper-hero {
+  position: relative;
+  margin-top: -90px;
+  padding-top: 90px;
+  padding-bottom: 5rem;
+  background-image: url(../images/hero-image-2000x741.jpg);
+  background-image: image-set(
+    url(../images/hero-image-900x714.jpg) 720w,
+    url(../images/hero-image-2000x741.jpg) 1380w,
+    url(../images/hero-image-3414x1265.jpg) 2200w
+  );
+
+  // <span>Photo by <a href="https://unsplash.com/@alex_andrews?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Alexander Andrews</a> on <a href="https://unsplash.com/collections/10637370/desktop-backgrounds?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+
+  background-position: top;
+  background-size: cover;
+  min-height: 94vh;
+  // color: $color__green-light2;
+  // clip-path: polygon(0% 0%, 100% 0%, 100% 93%, 50% 100%, 0% 93%);
+
+  h1,
+  h2,
+  p {
+    color: #ffffff;
+  }
+
+  @media screen and (min-width: 800px) {
+    height: 100vh;
+
+    > div {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.hero-container {
+  display: grid;
+  gap: 3rem;
+
+  .hero-text {
+    min-width: 200px;
+    text-align: center;
+    .header-text {
+      margin-top: 0;
+      line-height: 1;
+    }
+  }
+
+  .hero-button {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 0.925rem;
+    transition: all 0.5s;
+    margin-top: 2.1rem;
+
+    &:hover {
+      background-color: #13b293b0;
+      color: white;
+      border: 1px solid white;
+      // background-color: white;
+    }
+  }
+
+  .hero-image {
+    padding: 0.5rem;
+    // background-color: #4242424d;
+    background-color: #4c858fa6;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 3px #5b9299;
+    filter: drop-shadow(2px 4px 6px #4c858fa6);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .hero-container {
+    gap: 2rem;
+    grid-template-columns: 2fr 3fr;
+
+    .hero-text {
+      text-align: left;
+    }
+
+    .hero-image {
+      padding: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .hero-container {
+    gap: 6rem;
+  }
+}
+
+#historical-chart {
+  .chart-container {
+    .axis {
+      display: none;
+    }
+
+    .chart-version {
+      color: white;
+      text-align: center;
+      flex-basis: 50%;
+    }
+
+    .chart-info {
+      font-style: normal;
+    }
+  }
+}
+
+//  Home Feature Section
+
+.home-features-container {
+  margin: 2.5rem 0;
+  // background-color: $color__green-light2;
+  padding: 2rem;
+
+  h2 {
+    text-align: center;
+    font-size: $font__size-xxxl;
+    // margin: 0;
+  }
+
+  .home-features {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+    .features {
+      flex-basis: 300px;
+      padding: 1.5rem;
+      text-align: center;
+
+      i {
+        font-size: 4rem;
+        border: 2px solid $color__green-dark;
+        color: $color__green-dark;
+        border-radius: 50%;
+        padding: 1rem;
+        width: 100px;
+        height: 100px;
+        height: auto;
+        transition: 0.5s ease;
+      }
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .home-features {
+      flex-wrap: nowrap;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .home-features {
+      flex-flow: row nowrap;
+
+      .features {
+        flex-basis: 330px;
+      }
+    }
+  }
+}
+
+/**************************************************
+// Home page layout End ***************************
+/**************************************************/
+
+/**************************************************
+// CTA Section layout START ***************************
+/**************************************************/
+
+.site-cta {
+  background-color: $color__green-light2;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  padding-top: 2rem;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.form-newsletter {
+  background-color: white;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  label {
+    margin: 0.5rem;
+    flex-grow: 1;
+
+    input {
+      width: 100%;
+      background-color: white;
+      border-width: 2px;
+
+      &:focus {
+        color: $color__green-light;
+      }
+    }
+  }
+
+  input[type="submit"] {
+    margin: 0.5rem;
+    flex-basis: 100%;
+
+    @media screen and (min-width: 500px) {
+      max-width: 200px;
+      flex-basis: 200px;
+    }
+  }
+
+  input {
+    height: 2.5rem;
+  }
+}
+
+/**************************************************
+// CTA Section layout END ***************************
+/**************************************************/
+
+/**************************************************
+// calculator layout Start ***************************
+// Author: Dalbir Singh ***************************
+/**************************************************/
+
+// Tab Panel *******************************
+
+.carbon-calculator {
+  max-width: 1100px;
+  margin: auto;
+
+  @media screen and (min-width: 1440px) {
+    max-width: 1280px;
+  }
+
+  @media screen and (min-width: 600px) {
+    .tab-slider {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+}
+
+.tab-panel {
+  h3 {
+    text-align: center;
+    margin: 0;
+    padding-top: 1rem;
+  }
+
+  .tab-nav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: white;
+    border-radius: 0.25rem;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 40px;
+    z-index: 99;
+
+    display: flex;
+    align-items: center;
+
+    div:first-of-type,
+    div:last-of-type {
+      cursor: pointer;
+      padding: 0.4rem;
+      height: 2.5rem;
+      font-size: 2rem;
+      line-height: 1rem;
+      display: none;
+    }
+
+    .tab-slider {
+      overflow-x: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    ul {
+      // position: absolute;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-items: stretch;
+
+      transform: translateX(0);
+    }
+
+    li {
+      height: 2.5rem;
+      cursor: pointer;
+      outline-width: 0;
+      display: block;
+      flex: 1 1 auto;
+      text-align: center;
+      background-color: $color__green-light2;
+      border: 1px solid #68d5b5;
+      min-width: 60px;
+      padding: 0.4rem;
+      margin: 0;
+      margin-right: 2px;
+      margin-left: 2px;
+
+      span:first-child {
+        display: inline;
+      }
+
+      span:last-child {
+        display: none;
+      }
+
+      @media screen and (min-width: 600px) {
+        min-width: 100px;
+
+        span:first-child {
+          display: none;
+        }
+        span:last-child {
+          display: inline;
+        }
+
+        &:last-of-type {
+          min-width: 260px;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        min-width: 200px;
+      }
+    }
+
+    .activeTab {
+      border-bottom: 4px solid $color__green-light;
+    }
+  }
+
+  .tab-container > div {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.tab-container {
+  // border: 1px solid #68d5b5;
+  // border-radius: 0 0.25rem 0.25rem 0.25rem;
+}
+
+.tab-container > div {
+  margin-top: 0;
+  padding-bottom: 1rem;
+  min-height: 80vh;
+  // height: calc(100vh - 130px);
+  // max-height: calc(100vh - 130px);
+  // overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px #00000033;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(18, 204, 89);
+    outline-width: 1px solid green;
+  }
+
+  #section-heading {
+    background-color: transparent;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+    h2 {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.container-input {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  max-width: 300px;
+}
+
+// Fun fact container
+.fact-container {
+  padding: 5px;
+  background-color: $color__green-light;
+  color: $color__green-light2;
+
+  &:before {
+    content: "\f5c2";
+    margin-right: 3px;
+  }
+
+  &:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+  }
+}
+
+// React select dropdown form fields
+.react-dropdown-select {
+  max-width: 100%;
+
+  .react-dropdown-select-dropdown {
+    width: 100%;
+    min-width: 200px;
+    top: 40px;
+    position: absolute;
+  }
+}
+
+.container-logo-input {
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .container-logo {
+    padding-top: 2.25rem;
+    padding-left: 1rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 25%;
+
+    i {
+      color: $color__green-dark;
+      font-size: 3rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .container-input {
+    order: -1;
+    flex-grow: 0;
+    flex-basis: 75%;
+  }
+}
+
+#food-dynamic-entries > div {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    flex-grow: 1;
+    border-left: 0.3rem solid $color__green-light;
+    background-color: $color__green-light2;
+    padding: 6px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.item-remove-button {
+  padding: 0.05rem 0.5rem;
+  background-color: transparent;
+  border: 1px solid $color__green-dark;
+  line-height: 1;
+  height: 1.8rem;
+  color: $color__green-dark;
+  margin-left: 0.5rem;
+
+  &:hover {
+    background-color: rgba(211, 2, 2, 0.658);
+    color: $color__green-light2;
+  }
+}
+
+// common grid layout for all tab-container's (Food, Flight, Travel, Result)
+
+.tab-container {
+  .tab-content {
+    & > div {
+      border-radius: 0.5rem;
+      background-color: #f8f8f8;
+      padding: 0.4rem;
+      margin-bottom: 1rem;
+      height: calc(100% - 1rem);
+
+      @media screen and (min-width: 600px) {
+        padding: 1rem;
+      }
+
+      @media screen and (min-width: 1000px) {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    .tab-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 3rem;
+      row-gap: 1rem;
+      align-items: start;
+      align-content: stretch;
+    }
+
+    .full-width {
+      grid-column: span 2;
+    }
+  }
+}
+
+// Food Section ****************************
+
+.fieldset-food > div {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.carbon-print-food-revealed-container {
+  .emphasis {
+    font-size: 120%;
+    color: $color__green-light;
+    font-weight: bold;
+  }
+
+  .food-equivalent-car {
+    .car-icon {
+      // color: red;
+      font-size: 120%;
+      font-weight: bold;
+
+      &:after {
+        color: $color__text-main;
+        content: "\f1b9";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 160%;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+    }
+
+    .car-kms {
+      position: relative;
+      font-size: 120%;
+      font-weight: bold;
+    }
+  }
+}
+
+.carbon-print-food-united-revealed-container {
+  p {
+    text-align: center;
+  }
+}
+
+.light-green-background {
+  padding: 1.5rem;
+  background-color: $color__green-light2;
+  border: 2px solid $color__green-light;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 1000px) {
+  .section-column-2 {
+    .food-chart-section,
+    .reduce-carbon-chart-section {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .chart-info-section {
+      flex-basis: 25%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      order: 1;
+    }
+  }
+}
+
+.chart-info-section,
+.explanation-container {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: $color__green-light2;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.chart {
+  .chart-container {
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    .axis,
+    .chart-version {
+      text-align: left;
+      font-family: $font__heading;
+      color: $color__green-dark;
+      font-size: $font__size-sm;
+    }
+
+    .axis {
+      flex-basis: 65%;
+    }
+    .chart-version {
+      flex-basis: 35%;
+    }
+
+    .chart-version {
+      text-align: right;
+    }
+
+    .y2-axis {
+      display: none;
+    }
+
+    p {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .chart-info {
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    background-color: #cccccc;
+    color: $color__green-dark;
+    font-size: 90%;
+    padding: 0.5rem;
+    width: 100%;
+  }
+}
+
+.diet-display-container h3,
+.reduce-food-cfp-container h3 {
+  font-family: $font__heading;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.reduce-food-cfp-container-eat-local {
+  .axis {
+    display: none;
+  }
+
+  .chart-container {
+    .chart-version {
+      text-align: center;
+    }
+  }
+}
+
+// Flight Section
+.tab-container {
+  .flight-main-container {
+    .how-to-reduce {
+      background-color: transparent;
+      text-align: center;
+    }
+  }
+}
+
+.flight-main-container {
+  .emphasis {
+    color: $color__green-light;
+    font-size: 110%;
+  }
+  .container-input {
+    & > div {
+      margin-bottom: 0.6rem;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    > div > input {
+      padding: 0.4rem;
+      width: 100%;
+    }
+
+    > div > div {
+      width: 100%;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+      box-shadow: 1px 2px 3px #cccccc;
+
+      li {
+        padding: 0.25rem;
+        font-size: 90%;
+
+        &:hover {
+          background-color: $color__green-light;
+        }
+      }
+    }
+    .connecting-flight-radio-group,
+    .flight-radio-group {
+      > div {
+        padding: 6px 8px !important;
+        border-radius: 16px !important;
+        background-color: $color__green-light2;
+        > div {
+          color: #807f7f !important;
+
+          > div:last-child {
+            height: 22px !important;
+            width: 22px !important;
+            margin: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      & > div {
+        padding: 0.25rem;
+        border: 2px solid $color__green-dark;
+      }
+    }
+  }
+}
+
+.economy-class-flight-container,
+.non-stop-flight-container {
+  .chart {
+    .axis {
+      display: none;
+    }
+
+    .chart-version {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  }
+}
+
+// Travel Section
+
+.travel-main-container {
+  .fieldset-travel > div {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+
+    input {
+      padding: 0.4rem;
+      width: 50%;
+    }
+  }
+}
+
+.tab-container {
+  .travel-main-container {
+    .how-to-reduce {
+      background-color: transparent;
+      text-align: center;
+    }
+  }
+}
+
+.emphasis {
+  font-size: 120%;
+  color: $color__green-light;
+  font-weight: bold;
+}
+
+// total result
+
+.total-result-chart-container {
+
+  .total-result-chart {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .total-result-info {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+    h3 {
+      padding: 0;
+    }
+    p {
+      span {
+        color: $color__green-light;
+        font-weight: bold;
+      }
+    }
+    .total-print {
+      font-weight: bold;
+      font-size: 2rem;
+      margin-top: 1rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #0d9473;
+    }
+
+    .result-cards-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1rem;
+      max-width: 480px;
+      margin: auto;
+
+      .card-container {        
+        padding: 1rem 0.2rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 4px #0000006e;
+
+        p {
+          font-weight: bold;
+          text-align: center;
+          margin-bottom: 0;
+        }
+
+        .title-container {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-direction: column;
+
+          i {
+            font-size: 2rem;
+            color: $color__green-dark;
+          }
+          
+          img {
+            max-width: 60px;
+          }
+
+        }
+
+        .sub-result {
+          p {
+            color: #0d9473;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+#canvasjs-react-chart-container-39 {
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 800px) {
+  .total-result-chart-container {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/**************************************************
+// Calculator layout End ***************************
+/**************************************************/
+
+/**************************************************
+// About Us layout Start **************************
+/**************************************************/
+
+// hero section of page
+
+.about-us-container {
+  .heading-container {
+    position: relative;
+    text-align: center;
+
+    .img-container {
+      margin-top: -1rem;
+
+      img {
+        height: 80vh;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .super-text-container {
+      width: 100%;
+      position: absolute;
+      top: 1rem;
+    }
+
+    .text-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin: auto;
+      max-width: 700px;
+      top: 1rem;
+    }
+  }
+}
+
+// who we are and our values section
+.container-img-float {
+  margin-top: 3rem;
+
+  @media screen and (min-width: 1000px) {
+    margin-top: 6rem;
+  }
+
+  .img-float-left {
+    display: none;
+  }
+
+  .img-float {
+    height: 30vh;
+    margin-left: -4px;
+    margin-right: -4px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .img-float {
+      width: 50%;
+      height: 400px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .img-float-left {
+      display: block;
+      float: left;
+      padding-right: 1rem;
+
+      img {
+        // border-radius: 5px;
+        // border-bottom-right-radius: 3rem;
+        border-radius: 10rem;
+        border-top-right-radius: 1rem;
+      }
+    }
+
+    .img-float-right {
+      display: block;
+      float: right;
+      padding-left: 1rem;
+
+      img {
+        // border-radius: 5px;
+        // border-bottom-left-radius: 3rem;
+        border-radius: 10rem;
+        border-top-left-radius: 1rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .img-float-left {
+      padding-right: 5rem;
+    }
+
+    .img-float-right {
+      padding-left: 5rem;
+    }
+  }
+
+  &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+// team section
+
+.our-team-container {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .team-tile-container {
+    padding: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    .profile-image {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-links {
+      text-align: center;
+      margin-top: 0.5rem;
+
+      img {
+        height: 36px;
+        vertical-align: middle;
+        transition: all 0.4s;
+      }
+      img:hover {
+        transform: rotate(360deg);
+      }
+
+      img[src*="linkedin"],
+      #github-image,
+      #stack-overflow-image {
+        width: auto;
+        height: 32px;
+        border: none;
+        transition: all 0.4s;
+        filter: none;
+        border-radius: 0.9rem;
+      }
+
+      #stack-overflow-image {
+        margin-left: 0.2rem;
+        border-radius: 1rem;
+      }
+
+      #stack-overflow-image {
+        border-radius: 20%;
+        height: 28px;
+      }
+
+      img[src*="linked"]:hover,
+      #github-image:hover {
+        transform: rotate(360deg);
+      }
+
+      #stack-overflow-image:hover {
+        border-radius: 30%;
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .about-us-container {
+    h1 {
+      flex-basis: 100%;
+    }
+
+    .our-team-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+
+      .team-tile-container {
+        flex-basis: 250px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .about-us-container {
+    .our-team-container {
+      .team-tile-container {
+        flex-basis: 400px;
+      }
+    }
+  }
+}
+
+/**************************************************
+// About Us layout End ****************************
+/**************************************************/
+
+/**************************************************
+// Contact Us layout Start ************************
+/**************************************************/
+
+.contact-us-container {
+  h1 {
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  section {
+    margin-bottom: 4rem;
+  }
+
+  .contact-section1 {
+    padding-top: 1rem;
+
+    .image-wrapper {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 3rem;
+      filter: drop-shadow(2px 4px 6px rgb(204, 198, 196));
+
+      @media screen and (min-width: 750px) {
+        height: 400px;
+        margin-bottom: 0;
+      }
+
+      .contact-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10rem;
+        border-top-right-radius: 1rem;
+      }
+    }
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 0;
+
+    input,
+    textarea {
+      padding: 0.5rem;
+    }
+
+    textarea {
+      height: 110px;
+    }
+
+    input,
+    textarea,
+    button {
+      max-width: 600px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      margin-bottom: 0;
+      margin-top: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+
+      .contact-form {
+        min-width: 350px;
+      }
+
+      .contact-section1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    Section {
+      .contact-form {
+        min-width: 500px;
+      }
+    }
+  }
+}
+
+/**************************************************
+// Contact Us layout End **************************
+/**************************************************/
+
+/**************************************************
+// Carbon Impact layout Start *********************
+/**************************************************/
+
+.carbon-impact-container {
+  margin-bottom: 4rem;
+
+  .impact-image {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    img {
+      border-radius: 5px;
+      filter: drop-shadow(2px 4px 6px rgb(204, 198, 196));
+    }
+  }
+
+  .impact-section1,
+  .impact-section2 {
+    max-width: 720px;
+    margin: auto;
+  }
+}
+
+/**************************************************
+// Carbon Impact layout End ***********************
+/**************************************************/
+
+.page-not-found-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  justify-items: center;
+  height: 73vh;
+}
